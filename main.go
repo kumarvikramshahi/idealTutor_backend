@@ -11,7 +11,7 @@ import (
 func main(){
 	app:=fiber.New()
 	
-	// DatabaseConnection
+	// DatabaseConnections
 	configs.DatabaseConnection()
 	log.Println("hello main")
 	// for logging incoming requests

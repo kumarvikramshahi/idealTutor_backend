@@ -4,9 +4,9 @@ import (
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
-type skills struct {
-	maxLevelClassTeach int32    `json:"max_level_class_teach,omitempty" bson:"max_level_class_teach,omitempty"`
-	subjectTeach       []string `json:"subject_teach,omitempty" bson:"subject_teach,omitempty"`
+type Skills struct {
+	MaxLevelClassTeach int32    `json:"max_level_class_teach,omitempty" bson:"max_level_class_teach,omitempty"`
+	SubjectTeach       []string `json:"subject_teach,omitempty" bson:"subject_teach,omitempty"`
 }
 
 type Comments struct {
@@ -22,7 +22,7 @@ type TeacherProfile struct {
 	ProfilePic          string             `json:"profile_Pic,omitempty" bson:"profile_Pic,omitempty"`
 	Experience          int                `json:"experience,omitempty" bson:"experience,omitempty"`
 	NumOfStudentTeach   int                `json:"num_of_student_teach,omitempty" bson:"num_of_student_teach,omitempty"`
-	skills              skills             `json:"skills,omitempty" bson:"skills,omitempty"`
+	Skills              Skills             `json:"skills,omitempty" bson:"skills,omitempty"`
 	Achievement         string             `json:"achievement,omitempty" bson:"achievement,omitempty"`
 	Comments            []Comments         `json:"comments,omitempty" bson:"comments,omitempty"`
 	RatingStar          int                `json:"rating_star,omitempty" bson:"rating_star,omitempty"`
