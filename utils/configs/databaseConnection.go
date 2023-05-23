@@ -30,12 +30,13 @@ func DatabaseConnection() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	ctx, _ := context.WithTimeout(context.Background(), 10*time.Second)
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	err = client.Connect(ctx)
 	if err != nil {
 		log.Fatal(err)
 	}
-	// defer client.Disconnect(ctx)
+	defer cancel()
+	defer client.Disconnect(ctx)
 
 	// ping DB
 	err = client.Ping(ctx, readpref.Primary())

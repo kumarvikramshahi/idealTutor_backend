@@ -51,12 +51,12 @@ type educationalDetails struct {
 
 type StudentrProfile struct {
 	ID                 primitive.ObjectID `json:"_id,omitempty" bson:"_id,omitempty"`
-	FirstName          string             `json:"first_Name,omitempty" bson:"first_Name,omitempty"`
-	LastName           string             `json:"last_Name,omitempty" bson:"last_Name,omitempty"`
+	FirstName          string             `json:"first_name,omitempty" bson:"first_name,omitempty"`
+	LastName           string             `json:"last_name,omitempty" bson:"last_name,omitempty"`
 	Email              string             `json:"email,omitempty" bson:"email,omitempty"`
-	MobileNum          string             `json:"mobileNum,omitempty" bson:"mobileNum,omitempty"`
+	MobileNum          string             `json:"mobile_num,omitempty" bson:"mobile_num,omitempty"`
 	Password           string             `json:"password,omitempty" bson:"password,omitempty"`
-	ProfilePic         string             `json:"profile_Pic,omitempty" bson:"profile_Pic,omitempty"`
+	ProfilePic         string             `json:"profile_pic,omitempty" bson:"profile_pic,omitempty"`
 	EducationalDetails educationalDetails `json:"educational_details,omitempty" bson:"educational_details,omitempty"`
 	Address            address            `json:"address,omitempty" bson:"address,omitempty"`
 	TeachSessions      []string           `json:"teach_sessions,omitempty" bson:"teach_sessions,omitempty"`

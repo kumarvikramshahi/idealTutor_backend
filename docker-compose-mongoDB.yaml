@@ -1,0 +1,14 @@
+version: '1'
+services:
+  mongodb:
+    image: mongo
+    ports:
+      - 27017:27017
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=password
+    volumes:
+      - mongo-idt-data:/data/db
+volumes:
+  mongo-idt-data:
+    driver: local

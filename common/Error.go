@@ -1,8 +1,8 @@
 package common
 
-import (
-	log
-)
+// import (
+// 	log
+// )
 
 func CustomError() {
 
